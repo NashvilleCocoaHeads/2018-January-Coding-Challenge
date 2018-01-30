@@ -34,9 +34,9 @@ class LinkedListCodingChallengeTests: XCTestCase {
     
     func testPrepend() {
         
-        linkedList.prepend("world")
-        linkedList.prepend("hello")
-        XCTAssertEqual(Array(linkedList), ["hello", "world"])
+        linkedList.prepend("first")
+        linkedList.prepend("second")
+        XCTAssertEqual(Array(linkedList), ["second", "first"])
     }
     
     // We get access to extension methods on Sequence, like joined() and contains() below
