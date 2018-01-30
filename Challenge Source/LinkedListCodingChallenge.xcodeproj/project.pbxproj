@@ -33,7 +33,7 @@
 		8EB04D892020E16600EF32D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB04D932020E17300EF32D2 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		8EB04D942020E17300EF32D2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		8EE0AE412020E2C0005F7EC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8ECF5D802021370A00E9AC0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		8EB04D6F2020E16500EF32D2 = {
 			isa = PBXGroup;
 			children = (
-				8EE0AE412020E2C0005F7EC4 /* README.md */,
+				8ECF5D802021370A00E9AC0D /* README.md */,
 				8EB04D7B2020E16600EF32D2 /* LinkedListCodingChallenge */,
 				8EB04D862020E16600EF32D2 /* LinkedListCodingChallengeTests */,
 				8EB04D7A2020E16500EF32D2 /* Products */,
