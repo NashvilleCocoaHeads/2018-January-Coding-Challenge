@@ -10,27 +10,27 @@ import Foundation
 
 public protocol NodeType {
     
-    //The type of value being stored
+    /// The type of value being stored
     associatedtype Element
     
-    //The actual value being stored
+    /// The value being stored by the node
     var element: Element { get }
     
-    //A reference to the proceeding node in the list
+    /// A reference to the proceeding node in the list
     var next: Self? { get set }
 }
 
 public protocol LinkedListType: Sequence {
     
-    //A type implementing NodeType whose Element is the same as the LinkListType.Element
+    /// A type implementing NodeType whose Element is the same as the LinkListType.Element
     associatedtype Node: NodeType where Node.Element == Element
     
-    //The first node in the sequence
+    /// The first node in the sequence
     var head: Node? { get }
     
-    //Adds the element to the front of the sequence
+    /// Adds an element to the front of the sequence
     mutating func prepend(_ element: Element)
     
-    //Adds the element to the end of the sequence
+    /// Adds an element to the end of the sequence
     mutating func append(_ element: Element)
 }
