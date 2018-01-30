@@ -6,4 +6,6 @@ First, make the project compile by fleshing out the `LinkedList<T>` class accord
 
 Secondly, make the unit tests pass to ensure your implementation is correct.
 
-Once the tests are passing, submit a pull request with your solution. Put your source files under a project folder with your name.
+BONUS CHALLENGE: Uncomment the performance test and get it to execute in less than 0.5 seconds.
+
+Finally, submit a pull request with your solution. Put your source files under a project folder with your name.

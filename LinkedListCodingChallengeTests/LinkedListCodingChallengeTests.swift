@@ -49,4 +49,17 @@ class LinkedListCodingChallengeTests: XCTestCase {
         XCTAssert(linkedList.contains("2"))
     }
     
+    //Uncomment to run a performance test
+//    func testPerformance() {
+//
+//        let strings = (1...10000).map(String.init)
+//
+//        measure {
+//
+//            for string in strings {
+//
+//                linkedList.append(string)
+//            }
+//        }
+//    }
 }
