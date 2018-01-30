@@ -6,6 +6,8 @@ First, make the project compile by fleshing out the `LinkedList<T>` class accord
 
 Secondly, make the unit tests pass to ensure your implementation is correct.
 
-BONUS CHALLENGE: Uncomment the performance test and get it to execute in less than 0.5 seconds.
+Once tests are passing, see what logic, if any, from your linked list class can be moved to a protocol extension on `LinkedListType`. This would allow us to have a default implementation for any conforming type.
+
+BONUS CHALLENGE: Uncomment the performance tests and get them to execute in less than 0.5 seconds per test.
 
 Finally, submit a pull request with your solution. Put your source files under a project folder with your name.

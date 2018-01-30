@@ -27,18 +27,28 @@ class LinkedListCodingChallengeTests: XCTestCase {
     func testAppend() {
         
         linkedList.append("hello")
+        XCTAssertEqual(linkedList.head!.element, "hello")
         linkedList.append("world")
-        XCTAssertNotNil(linkedList.head)
         XCTAssertEqual(Array(linkedList), ["hello", "world"]) //Sequences can be converted back to an array (assuming it's not infinite!)
     }
     
+    func testPrepend() {
+        
+        linkedList.prepend("world")
+        linkedList.prepend("hello")
+        XCTAssertEqual(Array(linkedList), ["hello", "world"])
+    }
+    
+    // We get access to extension methods on Sequence, like joined() and contains() below
+    // We don't need to test these, because they are implemented by the standard library
+    // This is just to show they are accessible and behave as expected
     func testJoined() {
         
         linkedList.append("hello")
         linkedList.append(", ")
         linkedList.append("world")
         linkedList.append("!")
-        XCTAssertEqual(linkedList.joined(), "hello, world!") //We get access to extension methods on Sequence, like joined()
+        XCTAssertEqual(linkedList.joined(), "hello, world!")
     }
     
     func testContains() {
@@ -49,8 +59,8 @@ class LinkedListCodingChallengeTests: XCTestCase {
         XCTAssert(linkedList.contains("2"))
     }
     
-    //Uncomment to run a performance test
-//    func testPerformance() {
+    //Uncomment to run performance tests
+//    func testAppendPerformance() {
 //
 //        let strings = (1...10000).map(String.init)
 //
@@ -59,6 +69,19 @@ class LinkedListCodingChallengeTests: XCTestCase {
 //            for string in strings {
 //
 //                linkedList.append(string)
+//            }
+//        }
+//    }
+//
+//    func testPrependPerformance() {
+//
+//        let strings = (1...10000).map(String.init)
+//
+//        measure {
+//
+//            for string in strings {
+//
+//                linkedList.prepend(string)
 //            }
 //        }
 //    }
