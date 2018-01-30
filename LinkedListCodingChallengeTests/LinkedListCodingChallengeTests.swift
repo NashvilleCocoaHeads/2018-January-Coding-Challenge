@@ -11,26 +11,42 @@ import XCTest
 
 class LinkedListCodingChallengeTests: XCTestCase {
     
+    var linkedList: LinkedList<String>!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        linkedList = LinkedList<String>()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testStartsEmpty() {
+        
+        XCTAssertNil(linkedList.head)
+        XCTAssertNil(linkedList.first(where: { _ in true }))
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAppend() {
+        
+        linkedList.append("hello")
+        linkedList.append("world")
+        XCTAssertNotNil(linkedList.head)
+        XCTAssertEqual(Array(linkedList), ["hello", "world"]) //Sequences can be converted back to an array (assuming it's not infinite!)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testJoined() {
+        
+        linkedList.append("hello")
+        linkedList.append(", ")
+        linkedList.append("world")
+        linkedList.append("!")
+        XCTAssertEqual(linkedList.joined(), "hello, world!") //We get access to extension methods on Sequence, like joined()
+    }
+    
+    func testContains() {
+        
+        linkedList.append("1")
+        linkedList.append("2")
+        linkedList.append("3")
+        XCTAssert(linkedList.contains("2"))
     }
     
 }
