@@ -60,29 +60,29 @@ class LinkedListCodingChallengeTests: XCTestCase {
     }
     
     //Uncomment to run performance tests
-//    func testAppendPerformance() {
-//
-//        let strings = (1...10000).map(String.init)
-//
-//        measure {
-//
-//            for string in strings {
-//
-//                linkedList.append(string)
-//            }
-//        }
-//    }
-//
-//    func testPrependPerformance() {
-//
-//        let strings = (1...10000).map(String.init)
-//
-//        measure {
-//
-//            for string in strings {
-//
-//                linkedList.prepend(string)
-//            }
-//        }
-//    }
+    func testAppendPerformance() {
+
+        let strings = (1...10000).map(String.init)
+
+        measure {
+
+            for string in strings {
+
+                linkedList.append(string)
+            }
+        }
+    }
+
+    func testPrependPerformance() {
+
+        let strings = (1...10000).map(String.init)
+
+        measure {
+
+            for string in strings {
+
+                linkedList.prepend(string)
+            }
+        }
+    }
 }
