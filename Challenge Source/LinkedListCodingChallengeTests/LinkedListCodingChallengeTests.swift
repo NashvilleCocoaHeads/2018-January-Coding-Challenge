@@ -29,14 +29,17 @@ class LinkedListCodingChallengeTests: XCTestCase {
         linkedList.append("hello")
         XCTAssertEqual(linkedList.head!.element, "hello")
         linkedList.append("world")
-        XCTAssertEqual(Array(linkedList), ["hello", "world"]) //Sequences can be converted back to an array (assuming it's not infinite!)
+        
+        let arrayValue = Array(linkedList)
+        XCTAssertEqual(arrayValue, ["hello", "world"]) //Sequences can be converted back to an array (assuming it's not infinite!)
     }
     
     func testPrepend() {
         
         linkedList.prepend("first")
         linkedList.prepend("second")
-        XCTAssertEqual(Array(linkedList), ["second", "first"])
+        let arrayValue = Array(linkedList)
+        XCTAssertEqual(arrayValue, ["second", "first"])
     }
     
     // We get access to extension methods on Sequence, like joined() and contains() below
