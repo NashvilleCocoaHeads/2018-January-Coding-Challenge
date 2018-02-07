@@ -34,3 +34,33 @@ public protocol LinkedListType: Sequence {
     /// Adds an element to the end of the sequence
     mutating func append(_ element: Element)
 }
+
+
+extension LinkedListType {
+    
+    public typealias Iterator = LinkedListIterator<Node>
+    public func makeIterator() -> LinkedListIterator<Node> {
+        return LinkedListIterator(start: head)
+    }
+}
+
+// MARK: Iterator
+public struct LinkedListIterator<E: NodeType>: IteratorProtocol {
+    
+    public typealias Element = E.Element
+    var start: E?
+    var current: E?
+    
+    init(start: E?) {
+        self.start = start
+    }
+    
+    public mutating func next() -> E.Element? {
+        if current == nil {
+            current = start
+            return current?.element
+        }
+        current = current?.next
+        return current?.element
+    }
+}

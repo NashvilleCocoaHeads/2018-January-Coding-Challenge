@@ -49,18 +49,3 @@ public final class LinkedList<T>: LinkedListType {
     fileprivate var current: Node?
     fileprivate var tail: Node?
 }
-
-extension LinkedList: IteratorProtocol {
-    
-    public typealias Element = ListNode<T>.Element
-    
-    public func next() -> T? {
-        if current == nil {
-            current = head
-            return head?.element
-        }
-        current = current?.next
-        return current?.element
-    }
-}
-
