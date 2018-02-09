@@ -59,33 +59,6 @@ class LinkedListCodingChallengeTests: XCTestCase {
         XCTAssert(linkedList.contains("2"))
     }
     
-    //Uncomment to run performance tests
-    func testAppendPerformance() {
-
-        let strings = (1...10000).map(String.init)
-
-        measure {
-
-            for string in strings {
-
-                linkedList.append(string)
-            }
-        }
-    }
-
-    func testPrependPerformance() {
-
-        let strings = (1...10000).map(String.init)
-
-        measure {
-
-            for string in strings {
-
-                linkedList.prepend(string)
-            }
-        }
-    }
-    
     func testMultipleIterators() {
         
         linkedList.append("1")
@@ -102,4 +75,31 @@ class LinkedListCodingChallengeTests: XCTestCase {
         XCTAssertEqual(iterator2.next(), "3")
         
     }
+    
+    //Uncomment to run performance tests
+//    func testAppendPerformance() {
+//
+//        let strings = (1...10000).map(String.init)
+//
+//        measure {
+//
+//            for string in strings {
+//
+//                linkedList.append(string)
+//            }
+//        }
+//    }
+//
+//    func testPrependPerformance() {
+//
+//        let strings = (1...10000).map(String.init)
+//
+//        measure {
+//
+//            for string in strings {
+//
+//                linkedList.prepend(string)
+//            }
+//        }
+//    }
 }
