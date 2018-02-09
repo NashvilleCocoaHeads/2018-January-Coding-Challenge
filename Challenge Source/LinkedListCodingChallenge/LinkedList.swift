@@ -6,22 +6,12 @@
 //  Copyright © 2018 nashcocoaheads. All rights reserved.
 //
 
-public final class LinkedList<T>: LinkedListType, IteratorProtocol {
-    
+public final class LinkedList<T>: LinkedListType, Sequence {
+
     public typealias Element = T
     public typealias Node = LinkedNode<T>
     public var head: LinkedNode<T>?
     public var tail: LinkedNode<T>?
-    var currentNode: LinkedNode<T>?
-    
-    public func next() -> T? {
-        if let currentNode = currentNode {
-            defer { self.currentNode = currentNode.next }
-            return currentNode.next?.element
-        }
-        currentNode = head
-        return head?.element
-    }
     
     public func prepend(_ element: LinkedList<T>.Element) {
         guard head != nil else {
@@ -42,6 +32,23 @@ public final class LinkedList<T>: LinkedListType, IteratorProtocol {
         }
         tail?.next = newNode
         tail = newNode
+    }
+}
+
+extension LinkedListType {
+
+    public func makeIterator() -> AnyIterator<Element> {
+        
+        var currentNode: Node?
+        
+        return AnyIterator{
+            if let node = currentNode {
+                defer { currentNode = currentNode?.next }
+                return currentNode?.next?.element
+            }
+            currentNode = self.head
+            return self.head?.element
+        }
     }
 }
 

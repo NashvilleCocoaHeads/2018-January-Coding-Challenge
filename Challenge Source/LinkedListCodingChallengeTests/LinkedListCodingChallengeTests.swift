@@ -85,4 +85,21 @@ class LinkedListCodingChallengeTests: XCTestCase {
             }
         }
     }
+    
+    func testMultipleIterators() {
+        
+        linkedList.append("1")
+        linkedList.append("2")
+        linkedList.append("3")
+        
+        let iterator1 = linkedList.makeIterator()
+        XCTAssertEqual(iterator1.next(), "1")
+        XCTAssertEqual(iterator1.next(), "2")
+        
+        let iterator2 = linkedList.makeIterator()
+        XCTAssertEqual(iterator2.next(), "1")
+        XCTAssertEqual(iterator2.next(), "2")
+        XCTAssertEqual(iterator2.next(), "3")
+        
+    }
 }
