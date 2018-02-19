@@ -10,8 +10,9 @@
 		8EB04D832020E16600EF32D2 /* LinkedListCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB04D792020E16500EF32D2 /* LinkedListCodingChallenge.framework */; };
 		8EB04D882020E16600EF32D2 /* LinkedListCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB04D872020E16600EF32D2 /* LinkedListCodingChallengeTests.swift */; };
 		8EB04D8A2020E16600EF32D2 /* LinkedListCodingChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB04D7C2020E16600EF32D2 /* LinkedListCodingChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EB04D952020E17300EF32D2 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB04D932020E17300EF32D2 /* LinkedList.swift */; };
-		8EB04D962020E17300EF32D2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB04D942020E17300EF32D2 /* Protocols.swift */; };
+		B430B90E2029038400C60996 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB04D932020E17300EF32D2 /* LinkedList.swift */; };
+		B4D994FC202901EC005BE564 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D994FB202901EC005BE564 /* Protocols.swift */; };
+		B4D994FE202901FD005BE564 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D994FD202901FD005BE564 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +33,9 @@
 		8EB04D872020E16600EF32D2 /* LinkedListCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListCodingChallengeTests.swift; sourceTree = "<group>"; };
 		8EB04D892020E16600EF32D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB04D932020E17300EF32D2 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		8EB04D942020E17300EF32D2 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8ECF5D802021370A00E9AC0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B4D994FB202901EC005BE564 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B4D994FD202901FD005BE564 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			children = (
 				8EB04D7C2020E16600EF32D2 /* LinkedListCodingChallenge.h */,
 				8EB04D932020E17300EF32D2 /* LinkedList.swift */,
-				8EB04D942020E17300EF32D2 /* Protocols.swift */,
+				B4D994FD202901FD005BE564 /* Node.swift */,
+				B458E8022028F890007C53B7 /* Protocols */,
 				8EB04D7D2020E16600EF32D2 /* Info.plist */,
 			);
 			path = LinkedListCodingChallenge;
@@ -92,6 +95,14 @@
 				8EB04D892020E16600EF32D2 /* Info.plist */,
 			);
 			path = LinkedListCodingChallengeTests;
+			sourceTree = "<group>";
+		};
+		B458E8022028F890007C53B7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B4D994FB202901EC005BE564 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EB04D952020E17300EF32D2 /* LinkedList.swift in Sources */,
-				8EB04D962020E17300EF32D2 /* Protocols.swift in Sources */,
+				B430B90E2029038400C60996 /* LinkedList.swift in Sources */,
+				B4D994FC202901EC005BE564 /* Protocols.swift in Sources */,
+				B4D994FE202901FD005BE564 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
